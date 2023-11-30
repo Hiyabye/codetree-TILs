@@ -18,9 +18,10 @@ int main() {
 
     int ans = 0;
     for (int i=0; i<n.length(); i++) {
-        ans += (n[i] - '0') * power(m, i);
+        int x = (n[i] >= '0' && n[i] <= '9' ? n[i]-'0' : n[i]-'A'+10);
+        ans += x * power(m, i);
     }
-    
+
     cout << ans;
     return 0;
 }
