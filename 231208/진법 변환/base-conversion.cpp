@@ -7,7 +7,7 @@ int main() {
 
     long long ans = 0, base = 1;
     for (int i=n.length()-1; i>=0; i--) {
-        ans += base * (n[i] - '0');
+        ans += base * (n[i] >= '0' && n[i] <= '9' ? n[i] - '0' : n[i] - 'A');
         base *= m;
     }
     cout << ans;
