@@ -12,6 +12,6 @@ int main() {
         if (v[i] & 1) o++;
         else e++;
     }
-    cout << o << "\n" << e;
+    cout << e << "\n" << o;
     return 0;
 }
