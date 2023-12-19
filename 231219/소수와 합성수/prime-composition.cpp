@@ -14,7 +14,7 @@ int main() {
     for (int i=4; i<70000; i+=2) prime[i] = false;
     for (int i=3; i*i<70000; i+=2) {
         if (!prime[i]) continue;
-        for (int j=i*i; j<70000; j+=2) prime[j] = false;
+        for (int j=i*i; j<70000; j+=i*2) prime[j] = false;
     }
 
     // prime & composition
