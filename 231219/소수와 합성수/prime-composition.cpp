@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int n; cin >> n;
+    long long n; cin >> n;
 
     // one
     if (n == 1) { cout << "one"; return 0; }
@@ -20,7 +20,7 @@ int main() {
     // prime & composition
     if (n < 70000 && prime[n]) { cout << "prime"; return 0; }
     if (!(n & 1)) { cout << "composition"; return 0; }
-    for (int i=3; i*i<=n; i+=2) {
+    for (long long i=3; i*i<=n; i+=2) {
         if (!prime[i]) continue;
         if (!(n % i)) { cout << "composition"; return 0; }
     }
